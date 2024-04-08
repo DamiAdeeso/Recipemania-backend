@@ -46,7 +46,7 @@ public class UserEntity implements UserDetails {
 
     @Column(name = "password")
     @NotNull(message = "Password can't be null")
-    @NotBlank(message = " Pssword cannot be blank")
+    @NotBlank(message = " Password cannot be blank")
     @JsonIgnore
     private String password;
 
@@ -59,6 +59,10 @@ public class UserEntity implements UserDetails {
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     private Role role;
+
+
+    @OneToMany(mappedBy = "user")
+    private List<RecipeEntity> recipes;
 
 
     @Override

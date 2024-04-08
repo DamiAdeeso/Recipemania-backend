@@ -1,5 +1,6 @@
 package com.SharpDevs.Recipe.Mania.domain.Entity;
 
+import com.SharpDevs.Recipe.Mania.Service.RecipeService;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -32,6 +33,7 @@ public class CommentEntity {
 
     @JoinColumn(name = "user_id")
     private UserEntity user;
+
 
 //    @Column(name = "replies")
 //    @OneToMany

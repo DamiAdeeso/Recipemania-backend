@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -37,4 +38,6 @@ public class CategoryEntity {
     @JsonBackReference
     private UserEntity user;
 
+    @OneToMany(mappedBy = "category")
+    private List<RecipeEntity> recipes;
 }

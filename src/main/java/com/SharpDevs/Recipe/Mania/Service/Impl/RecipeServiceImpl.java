@@ -56,7 +56,7 @@ public class RecipeServiceImpl implements RecipeService  {
                         recipeEntity.setFeatured_image(awsService.saveObjects(recipeOperationsDto.getFeaturedImage()));
                     }
                     }catch(Exception ex){
-                        throw new FileUploadException("Error occured when trying to upload Recipe picture");
+                        throw new FileUploadException(ex.getMessage());
                     }
                     RecipeEntity  savedRecipeEntity = recipeRepository.save(recipeEntity);
                    RecipeDto recipeDto =  recipeDtoMapper.mapTo(savedRecipeEntity);

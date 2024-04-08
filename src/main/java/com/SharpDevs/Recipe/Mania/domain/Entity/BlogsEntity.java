@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 @Data
@@ -34,7 +35,7 @@ public class BlogsEntity {
     @Column(name = "title")
     @NotBlank(message = "Title cannot be blank")
     private String title ="test";
-
+    ArrayList list = new ArrayList();
     @Column(name = "permLink")
     @NotBlank(message = "permLink cannot be blank")
     private String permLink;
