@@ -65,7 +65,7 @@ public class RecipeServiceImpl implements RecipeService  {
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
                 }
             }else{
-                throw new RuntimeException("User does'nt exist");
+                throw new RuntimeException("User does not exist");
             }
 
         }catch(Exception e){
