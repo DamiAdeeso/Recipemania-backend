@@ -50,8 +50,6 @@ public class CategoriesServiceImpl implements CategoryService {
         return new ResponseEntity<>(categoryDtos, HttpStatus.OK);
     }
 
-
-
     @Override
     public ResponseEntity<CategoryDto> getCategory(Long id) {
         CategoryEntity foundCategory = categoryRepository.findById(id).orElse(null);
